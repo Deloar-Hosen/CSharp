@@ -1,0 +1,25 @@
+using System;
+public class Test
+{
+    public static void Main()
+    {
+        Console.Write("Enter the first number: ");
+        bool isValidNum1 = double.TryParse(Console.ReadLine(), out double num1);
+
+        // Step 2: Prompt the user to enter the second number
+        Console.Write("Enter the second number: ");
+        bool isValidNum2 = double.TryParse(Console.ReadLine(), out double num2);
+
+        // Step 3: Validate input using if statements
+        if (!isValidNum1 || !isValidNum2)
+        {
+            Console.WriteLine("Invalid input. Please enter valid numeric values.");
+        }
+        else
+        {
+          double addition=num1+num2;
+           Console.WriteLine(addition);
+        }
+
+    }
+}
