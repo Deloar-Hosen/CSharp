@@ -1,0 +1,37 @@
+using System;
+using System.Threading;
+using System.Threading.Tasks.Dataflow;
+public class Test
+{
+    public static void Main()
+    {
+        //Declare array
+        int[] array = new int[5];
+
+        //user input
+        Console.WriteLine($"Enter some numbers:");
+
+        for (int i = 0; i < array.Length; i++)
+        {
+            array[i] = Convert.ToInt32(Console.ReadLine());
+        }
+        //print array by foreach
+        Console.WriteLine($"The numbers-");
+        foreach (var num in array)
+        {
+            Console.WriteLine(num);
+        }
+        //array reverse
+        Array.Reverse(array);
+
+        Console.WriteLine($"Revers array-");
+
+        foreach (var num in array)
+        {
+            Console.WriteLine(num);
+
+        }
+
+
+    }
+}
