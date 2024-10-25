@@ -1,0 +1,17 @@
+using System;
+using System.Threading;
+public class Test
+{
+    public static void Main()
+    {
+
+string name="My name is Deloar hosen.I am from Bangladesh.";
+
+for(int i=0;i<name.Length;i++)
+{
+    Console.Write(name[i]);
+    Thread.Sleep(134);
+    
+}
+    }
+}
