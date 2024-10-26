@@ -1,0 +1,50 @@
+using System;
+using System.ComponentModel;
+using System.Threading;
+using System.Threading.Tasks.Dataflow;
+public class Test
+{
+    public static void Main()
+    {
+        //creat a list for int number
+        List<int> numbers = new List<int>();
+        //add something in list
+        numbers.Add(5);
+        numbers.Add(8);
+        //output in manual
+        Console.WriteLine(numbers[0]);
+        Console.WriteLine(numbers[1]);
+
+        //creat a list for string name
+        List<string> student = new List<string>();
+
+        student.Add("alice");
+        student.Add("Bob");
+
+        Console.WriteLine(student[0]);
+        Console.WriteLine(student[1]);
+
+        //creat a list for user input
+        List<string> list = new List<string>();
+        Console.Write($"How many string do you want to input:");
+        string? inp = Console.ReadLine();
+        int Inp = int.Parse(inp);
+
+        //loop for user input
+        Console.WriteLine($"Enter some data:");
+        for (int i = 0; i < Inp; i++)
+        {
+            //taking input from user
+            string? lists = Console.ReadLine();
+
+            //add user's input list
+            list.Add(lists);
+        }
+        //output by usign foreach
+        foreach (var data in list)
+        {
+            Console.WriteLine(data);
+        }
+
+    }
+}
