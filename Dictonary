@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+       //creat dictonary                                                    //keyValuePaire
+        Dictionary<string, int> studentMarks = new Dictionary<string, int>{{"Deloar",88}};
+
+        // add something in dictonary
+        studentMarks.Add("Alice", 85);
+        studentMarks.Add("Bob", 90);
+        studentMarks.Add("Charlie", 78);
+
+        // data access
+        Console.WriteLine("Deloar's Marks: " + studentMarks["Deloar"]);
+
+        // showing key-value pair in foreach
+        Console.WriteLine("\nAll Students' Marks:");
+        foreach (KeyValuePair<string, int> kvp in studentMarks)
+        {
+            Console.WriteLine($"Name:{kvp.Key}    Marks:{kvp.Value}");
+        }
+    }
+}
