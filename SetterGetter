@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    class Student
+    {
+       private int roll;//not writable and not readable
+    public void SetData(int roll) //creating method for write private data
+    {
+      this.roll=roll;
+    }
+      public int Getdata()    //creating method for read private data
+        {
+            return roll;
+        }
+    }
+    static void Main()
+    {
+        //creat object
+   Student s1=new Student();
+
+ s1.SetData(21);//calling method for write in private data
+Console.WriteLine($"Roll={s1.Getdata()}");
+
+    }
+}
