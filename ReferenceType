@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Security.Cryptography;
+
+class Student
+{
+    public string? name;
+    public int age;
+}
+class Program
+{
+    static void Main()
+    {
+    Student s1=new Student();
+    s1.name="Deloar";
+    s1.age=20;
+    Console.WriteLine($"Before refering-s1.name:{s1.name} and s1.age:{s1.age}\n");
+    
+   //Reference type
+    Student s2=s1;
+    s2.name="Harry";
+    s2.age=22;
+    Console.WriteLine($"After refering-s1.name:{s1.name} and s1.age:{s1.age}\n");
+     Console.WriteLine($"s2.name={s2.name} and s2.age={s2.age}");
+   
+
+    }
+}
