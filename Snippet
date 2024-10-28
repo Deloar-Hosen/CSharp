@@ -1,0 +1,71 @@
+{
+"Write Line with interpolation": {
+	 	"scope": "csharp",
+	 	"prefix": "writeline",
+		"body": [
+			"Console.WriteLine($\"${1:}\");",
+			"$2"
+		],
+	 	"description": "write a line to the console with interpolation"
+	 
+},
+
+"Read Line string input": {
+		"scope": "csharp",
+		"prefix": "readLine",
+	   "body": [
+		   "string ${1:text}=Console.ReadLine();",
+		   "$2"
+	   ],
+		"description": "snippet for string input"
+	},
+
+	"Read Line number input": {
+		"scope": "csharp",
+		"prefix": "inputnumber",
+	   "body": [
+		   "int ${1:text}=Convert.ToInt32(Console.ReadLine());",
+		   "$2"
+	   ],
+		"description": "snippet for number input"
+	},
+
+"Creat a class": {
+		"scope": "csharp",
+		"prefix": "createclass",
+	   "body": [
+		"public class Test",
+	    "{",
+		  "\t$1",
+		"}",
+		"$2"
+	   ],
+		"description": "Creat a class template"
+	},
+		"Creat a constructor": {
+		"scope": "csharp",
+		"prefix": "constructor",
+	   "body": [
+		"public ${1:ClassName}(${2:parameter})",
+		"{",
+        "\t$3",
+		"}",
+	   ],
+		"description": "Creat a constructor declaration"
+	},
+
+		"Main method": {
+		"scope": "csharp",
+		"prefix": "psvm",
+	   "body": [
+		"public static void Main()",
+		"{",
+        "\t$1",
+		"}",
+	   ],
+		"description": "Creat Main method"
+	},
+
+
+
+}
