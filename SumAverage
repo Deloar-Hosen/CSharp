@@ -1,0 +1,38 @@
+using System;
+using System.Threading;
+using System.Threading.Tasks.Dataflow;
+public class Test
+{
+    public static void Main()
+    {
+//Program for get sum and average
+
+//input user's int number
+Console.Write($"Enter how many number do you want for sum:");
+int demand=Convert.ToInt32(Console.ReadLine());
+
+
+Console.WriteLine($"\nEnter the numbers:");
+int[] numbers=new int[demand];//array declare for storing number
+
+  int sum=0;
+
+for(int i=0;i<demand;i++) //loop for number input
+{
+    numbers[i]=Convert.ToInt32(Console.ReadLine());
+}
+
+foreach(int Num in numbers)//statement for sum the numbers
+{
+    sum=sum+Num;
+}
+
+Console.WriteLine($"\nSum of your numbers={sum}");
+
+//average
+double average=(double)sum/demand;
+Console.WriteLine($"\nAverage of your numbers:{average}");
+
+   
+    }
+}
