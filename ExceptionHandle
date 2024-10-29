@@ -1,0 +1,49 @@
+using System;
+using System.Threading;
+using System.Threading.Tasks.Dataflow;
+public class Test
+{
+    public static void Main()
+    {
+        try
+        {
+            int num1 = Convert.ToInt32(Console.ReadLine());
+            int num2 = Convert.ToInt32(Console.ReadLine());
+
+            int result = num1 / num2;
+            Console.WriteLine($"{result}");
+
+        }
+
+      //Exeption list(overflow,format and dividedByZero exeption etc.)
+        catch (OverflowException)
+        {
+            Console.WriteLine($"Exception:the number is too big.");
+        }
+
+         catch(DivideByZeroException)
+      {
+       Console.WriteLine($"Exception:you cannot divide by zero.");     
+      }
+
+      catch(FormatException e)
+      {
+        Console.WriteLine($"Exception:{e.Message}");
+        
+      }
+       
+     //This is for all kind of exception.
+        catch (Exception e)
+        {
+            Console.WriteLine($"{e.Message}");
+        }
+
+     //Here are those code which will always work
+        finally
+        {
+            Console.WriteLine($"good bye");
+        }
+
+
+    }
+}
