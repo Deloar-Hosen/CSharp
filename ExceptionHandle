@@ -7,8 +7,16 @@ public class Test
     {
         try
         {
+            Console.Write($"Enter num1:");
             int num1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write($"Enter num2:");
             int num2 = Convert.ToInt32(Console.ReadLine());
+            
+            //custom exeption created
+            if(num2>num1)
+            {
+                throw new ArgumentException("num2 cannot be greater than num1");//argument exception
+            }
 
             int result = num1 / num2;
             Console.WriteLine($"{result}");
@@ -35,7 +43,7 @@ public class Test
      //This is for all kind of exception.
         catch (Exception e)
         {
-            Console.WriteLine($"{e.Message}");
+            Console.WriteLine($"Exception:{e.Message}");//custom exception output
         }
 
      //Here are those code which will always work
