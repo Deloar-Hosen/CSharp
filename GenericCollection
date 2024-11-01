@@ -1,0 +1,17 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main()
+    {
+        List<int> list = new List<int>() { 3, 6, 7 };
+        List<string> Name = new List<string>() { "Delwar", "Nahid", "Salam" };
+
+        for (int i = 0; i < Name.Count; i++)
+        {
+            Console.WriteLine($"Name: {Name[i]}");
+            Console.WriteLine($"Roll: {list[i]}");
+        }
+    }
+}
