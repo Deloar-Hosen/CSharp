@@ -1,0 +1,19 @@
+using System;
+using System.Collections;
+
+class Program
+{
+    static void Main()
+    {
+   ArrayList List=new ArrayList();
+   List.Add("Deloar hosen.");
+   List.Add(23);
+   List.Add(3.24);
+   foreach(var item in List)
+   {
+    Console.WriteLine($"{item}");
+    
+   }
+     
+    }
+}

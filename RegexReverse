@@ -1,0 +1,29 @@
+using System;
+using System.Text.RegularExpressions;
+
+public class Test
+{
+    public static void Main()
+    {
+      Console.WriteLine($"Enter a string:");
+      
+      string? name=Console.ReadLine();
+      string Name=Regex.Replace(name,"[^a-zA-Z]","");
+        Console.WriteLine($"{Name}");
+
+    char[] revers=new char[Name.Length];
+
+    for(int i=0;i<Name.Length;i++)
+    {
+        revers[i]=Name[Name.Length-i-1];
+    }
+      for(int i=0;i<revers.Length;i++)
+      {
+        Console.Write(revers[i]);
+        
+      } 
+        
+    }
+}
+
+
