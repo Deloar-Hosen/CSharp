@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Reflection.Metadata.Ecma335;
+
+
+//ClassType List init system without constructor and constructor
+class Student
+{
+public string Name{get; set;} 
+    public int Roll{get;set;}
+}
+class employe:Student
+{
+    public employe(string n,int r)
+    {
+        Name=n;Roll=r;
+    }
+}
+
+class Program
+{
+    static void Main()
+    {
+  
+List<Student> students=new List<Student>()
+{
+  new Student{Name="Deloar",Roll=34}//Object init system in List without constructor
+};
+Student students2=new Student();//ClassType object creat and value assign
+students2.Name="Imtiaz";
+students2.Roll=66;
+
+students.Add(students2);//students2 added in List
+
+foreach(Student item in students)
+{
+    Console.WriteLine($"Name:{item.Name} and Roll:{item.Roll}");//print system List item
+}
+
+List<employe> e1=new List<employe>()
+{
+    new employe("Nahid",64) //Object init system in List with constructor
+};
+foreach(employe item in e1)
+{
+    Console.WriteLine($"Name:{item.Name} and Roll:{item.Roll}");
+    
+}
+
+    }
+}
