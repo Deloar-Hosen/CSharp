@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+
+class Student
+{
+    public string Name ;
+    public int Roll;
+}
+
+class Program
+{
+    static void Main()
+    {
+  
+
+Student student1=new Student
+{
+   Name="Deloar",Roll=45 //object initialize system by using field without constructor
+};
+
+Student student2=new Student();
+student2.Name="Imtiaz";   //value assign in object by another system
+student2.Roll=43;
+
+
+    
+    }
+}
+
+
+
+
