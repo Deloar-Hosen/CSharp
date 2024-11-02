@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Commo
+class Student
+{
+    public string Name { get; set; }
+    public int Roll { get; set; }
+}
+
+class Program
+{
+    static void Main()
+    {
+    
+        Student student = new Student { Name = "Deloar", Roll = 3 };
+        Console.WriteLine($"Name: {student.Name}, Roll: {student.Roll}");
+    }
+}
